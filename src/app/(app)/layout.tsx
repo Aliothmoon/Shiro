@@ -160,7 +160,7 @@ export default async function RootLayout(props: PropsWithChildren) {
           <head>
             <PublicEnvScript />
             <Global />
-            <SayHi />
+            {/*<SayHi />*/}
             <HydrationEndDetector />
             <AccentColorStyleInjector color={themeConfig.config.color} />
 

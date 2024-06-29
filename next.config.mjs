@@ -26,7 +26,7 @@ if (repoInfo) {
 
 /** @type {import('next').NextConfig} */
 // eslint-disable-next-line import/no-mutable-exports
-let nextConfig = {
+const NEXT_CONFIG = {
   // logging: {
   //   fetches: {
 
@@ -90,8 +90,8 @@ let nextConfig = {
 
 // if (env.SENTRY === 'true' && isProd) {
 //   // @ts-expect-error
-//   nextConfig = withSentryConfig(
-//     nextConfig,
+//   NEXT_CONFIG = withSentryConfig(
+//     NEXT_CONFIG,
 //     {
 //       // For all available options, see:
 //       // https://github.com/getsentry/sentry-webpack-plugin#options
@@ -125,12 +125,12 @@ let nextConfig = {
 // }
 
 if (process.env.ANALYZE === 'true') {
-  nextConfig = NextBundleAnalyzer({
+  NEXT_CONFIG = NextBundleAnalyzer({
     enabled: true,
-  })(nextConfig)
+  })(NEXT_CONFIG)
 }
 
-export default nextConfig
+export default NEXT_CONFIG
 
 function getRepoInfo() {
   if (process.env.VERCEL) {
@@ -152,7 +152,8 @@ function getRepoInfo() {
         }
     }
   } else {
-    return getRepoInfoFromGit()
+    // return getRepoInfoFromGit()
+    return null
   }
 }
 

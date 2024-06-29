@@ -76,11 +76,11 @@ export const headerMenuConfig: IHeaderMenu[] = [
       },
     ],
   },
-  {
-    title: '友链',
-    icon: h(FaSolidUserFriends),
-    path: '/friends',
-  },
+  // {
+  //   title: '友链',
+  //   icon: h(FaSolidUserFriends),
+  //   path: '/friends',
+  // },
 
   {
     title: '更多',
@@ -102,11 +102,11 @@ export const headerMenuConfig: IHeaderMenu[] = [
         path: '/says',
         icon: h(FaSolidComments),
       },
-      {
-        title: '跃迁',
-        icon: h(RMixPlanet),
-        path: 'https://travel.moe/go.html',
-      },
+      // {
+      //   title: '跃迁',
+      //   icon: h(RMixPlanet),
+      //   path: 'https://travel.moe/go.html',
+      // },
     ],
   },
 ]

@@ -41,12 +41,11 @@ import { useCreatePost, useUpdatePost } from '~/queries/definition/post'
 export default function Page() {
   const search = useSearchParams()
   const id = search.get('id')
-
+  console.log('post edit',id)
   const { data, isLoading, refetch } = useQuery({
     ...adminQueries.post.getPost(id!),
     enabled: !!id,
   })
-
   const [key] = useRefetchData(refetch)
 
   if (id) {
